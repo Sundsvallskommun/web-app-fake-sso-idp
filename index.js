@@ -1,16 +1,9 @@
-require('dotenv').config()
-const { cleanEnv, url, port, bool } = require('envalid')
 const { create } = require('./lib/idp')
 const { users } = require('./users')
-
-const env = cleanEnv(process.env, {
-  PORT: port({ default: 7000 }),
-  ENUMERATEUSERS: bool({ default: true }),
-  DESTINATION: url(),
-  METADATA: url()
-})
+const { env } = require('./env')
 
 const app = create({
+  basepath: env.BASEPATH,
   // NOTE: If false user will have to type in username and password themself.
   enumerateUsers: env.ENUMERATEUSERS,
   serviceProvider: {
