@@ -51,3 +51,12 @@ run.js
 
 # user file
 users.js
+# Local user datasets (keep example tracked)
+users*.js
+!users-example.js
+users.old
+users.bak.*.js
+private.key
+public.pem
+draken-rob.js
+draken-pt-ange.js
