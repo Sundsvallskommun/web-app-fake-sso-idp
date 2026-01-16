@@ -57,6 +57,7 @@ users*.js
 users.old
 users.bak.*.js
 private.key
+certificate.crt
 public.pem
 draken-rob.js
 draken-pt-ange.js
